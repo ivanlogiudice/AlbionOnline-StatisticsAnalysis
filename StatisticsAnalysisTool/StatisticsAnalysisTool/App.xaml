@@ -11,6 +11,7 @@
         <Color x:Key="Background.First">#FF36363F</Color>
         <Color x:Key="Background.Second">#FF2B2B33</Color>
         <Color x:Key="Background.Third">#FF202026</Color>
+        <Color x:Key="Color.Transparent">#00000000</Color>
 
         <!-- Item level colors -->
         <Color x:Key="Item.Level.Color.0">#FFb1b0ae</Color>
@@ -63,6 +64,7 @@
         <SolidColorBrush x:Key="Solid.Color.Text.ToOldSecond" Color="{StaticResource Color.Text.ToOldSecond}"/>
         <SolidColorBrush x:Key="Solid.Color.Text.ToOldThird" Color="{StaticResource Color.Text.ToOldThird}"/>
         <SolidColorBrush x:Key="Solid.Color.Text.NoValue" Color="{StaticResource Color.Text.NoValue}"/>
+        <SolidColorBrush x:Key="SolidColorBrush.Transparent" Color="{StaticResource Color.City.Transparent}"/>
 
         <SolidColorBrush x:Key="SolidColorBrush.City.Caerleon" Color="{StaticResource Color.City.Caerleon}"/>
         <SolidColorBrush x:Key="SolidColorBrush.City.Thetford" Color="{StaticResource Color.City.Thetford}"/>
@@ -75,7 +77,14 @@
         <SolidColorBrush x:Key="SolidColorBrush.City.MorganasRest" Color="{StaticResource Color.City.MorganasRest}"/>
 
         <!-- ######################################################################################### -->
-        
+
+
+        <!-- Background GradientBrush -->
+        <RadialGradientBrush x:Key="MainBackgroundGradientBrush">
+            <GradientStop Color="{StaticResource Background.Second}" Offset="0"/>
+            <GradientStop Color="{StaticResource Background.First}" Offset="1"/>
+        </RadialGradientBrush>
+
         <!-- City Styles -->
         <Style TargetType="Label" x:Key="CaerleonStyle" >
             <Setter Property="Height" Value="28" />
@@ -86,7 +95,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.Caerleon}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -101,7 +110,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.Thetford}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -116,7 +125,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.Bridgewatch}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -131,7 +140,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.Martlock}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -146,7 +155,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.Lymhurst}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -161,7 +170,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.FortSterling}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -176,7 +185,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.ArthursRest}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -191,7 +200,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.MerlynsRest}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -206,7 +215,7 @@
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                        <GradientStop Color="#FF33333F" Offset="1"/>
+                        <GradientStop Color="{StaticResource Color.Transparent}" Offset="1"/>
                         <GradientStop Color="{StaticResource Color.City.MorganasRest}"/>
                     </LinearGradientBrush>
                 </Setter.Value>
@@ -492,7 +501,7 @@
 
         <!-- ListView style -->
         <Style TargetType="{x:Type ListView}">
-            <Setter Property="Background" Value="{StaticResource SolidColorBrush.Background.First}" />
+            <Setter Property="Background" Value="{StaticResource MainBackgroundGradientBrush}" />
         </Style>
         <Style TargetType="{x:Type ListViewItem}">
             <Setter Property="Foreground" Value="{StaticResource SolidColorBrush.Foreground.First}"/>

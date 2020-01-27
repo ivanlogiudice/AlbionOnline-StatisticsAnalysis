@@ -6,7 +6,7 @@
         xmlns:fa="http://schemas.fontawesome.io/icons/" 
         mc:Ignorable="d"
         Title="ItemWindow" MinHeight="335" Height="360" MinWidth="900" Width="1180" AllowsTransparency="True" Style="{StaticResource PrimaryWindow}" FontSize="{StaticResource BaseFontSize}" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
-    <Grid>
+    <Grid Background="{StaticResource MainBackgroundGradientBrush}">
         <Border BorderThickness="1,0,0,0" BorderBrush="{StaticResource SolidColorBrush.Background.Third}"/>
         <Border BorderThickness="0,1,0,0" BorderBrush="{StaticResource SolidColorBrush.Background.Third}"/>
         <Border BorderThickness="0,0,1,0" BorderBrush="{StaticResource SolidColorBrush.Background.Third}"/>
@@ -14,7 +14,7 @@
         <Grid HorizontalAlignment="Left" Height="75" Margin="10,5,0,0" VerticalAlignment="Top" Width="75">
             <fa:ImageAwesome x:Name="FaLoadIcon" Visibility="Hidden" Icon="CircleOutlineNotch" Spin="True" SpinDuration="4" Foreground="{StaticResource SolidColorBrush.Foreground.First}" />
         </Grid>
-        <Grid ZIndex="-1" Background="{StaticResource SolidColorBrush.Background.Second}" Height="80" VerticalAlignment="Top" MouseDown="Hotbar_MouseDown" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <Grid ZIndex="-1" Background="{StaticResource SolidColorBrush.Background.First}" Height="80" VerticalAlignment="Top" MouseDown="Hotbar_MouseDown" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
             <Button x:Name="CloseButton" Style="{StaticResource WindowButtonStyle}" Content="r" Margin="-2,0,0,0" Click="CloseButton_Click"/>
             <Button x:Name="MinimizeButton" Style="{StaticResource WindowButtonStyle}" Content="0" Margin="0,0,28,0" Click="MinimizeButton_Click"/>
             <Image x:Name="ImgItemImage" HorizontalAlignment="Left" Height="75" Margin="10,5,0,0" VerticalAlignment="Top" Width="75"/>
@@ -24,14 +24,6 @@
             <CheckBox x:Name="ChbShowVillages" Content="SHOW__VILLAGES" Margin="470,43,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="200" Height="26" VerticalAlignment="Top" Foreground="{StaticResource SolidColorBrush.Foreground.First}" Click="ShowVillagesPrices_Click" />
             <CheckBox x:Name="ChbAutoUpdateData" Content="Auto Daten Update" IsChecked="True" Margin="700,43,0,0" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="150" Height="26" VerticalAlignment="Top" Foreground="{StaticResource SolidColorBrush.Foreground.First}" />
             <Label x:Name="LblLastUpdate" Content="LAST__UPDATE" Margin="0,43,10,0" VerticalAlignment="Top" ToolTip="Letzte Aktualisierung" Foreground="{StaticResource SolidColorBrush.Foreground.First}" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Width="230"/>
-            <!--<ListBox Height="58" Width="150" Margin="315,11,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
-                <ListBoxItem Height="20">Test1</ListBoxItem>
-                <ListBoxItem Height="20">Test2</ListBoxItem>
-                <ListBoxItem Height="20">Test3</ListBoxItem>
-                <ListBoxItem Height="20">Test4</ListBoxItem>
-                <ListBoxItem Height="20">Test5</ListBoxItem>
-                <ListBoxItem Height="20">Test6</ListBoxItem>
-            </ListBox>-->
         </Grid>
         <ListView x:Name="ListViewPrices" Margin="1,80,1,41" BorderThickness="0" SelectionMode="Single" Foreground="{StaticResource SolidColorBrush.Foreground.First}">
             <ListView.View>
